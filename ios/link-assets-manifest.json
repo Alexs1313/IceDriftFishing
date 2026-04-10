@@ -1,0 +1,29 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/f/Akatab-Black.ttf",
+      "sha1": "2e9da0c218679af9b8a237f62f041a7550cf60c2"
+    },
+    {
+      "path": "assets/f/Akatab-Bold.ttf",
+      "sha1": "33b0ec04caec866de6dd2ed5fc5e045e40497c85"
+    },
+    {
+      "path": "assets/f/Akatab-ExtraBold.ttf",
+      "sha1": "53b6b7668d4ee306fde76bc43d012e97ee42c22e"
+    },
+    {
+      "path": "assets/f/Akatab-Medium.ttf",
+      "sha1": "2742351703ace10bd8ded35187ce027ea5e87f4b"
+    },
+    {
+      "path": "assets/f/Akatab-Regular.ttf",
+      "sha1": "1ab4836e6b3e9f6a7ed95bb4531af51e1d138000"
+    },
+    {
+      "path": "assets/f/Akatab-SemiBold.ttf",
+      "sha1": "76be9bb8d722e65968cdcb1cf275b3c67d83eb40"
+    }
+  ]
+}
