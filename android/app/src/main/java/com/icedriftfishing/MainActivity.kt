@@ -1,4 +1,4 @@
-package com.icedriftfishing
+package com.icedriftfishexplorer
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate

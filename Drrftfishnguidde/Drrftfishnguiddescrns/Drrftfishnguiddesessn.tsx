@@ -627,8 +627,8 @@ const styles = StyleSheet.create({
   },
   drrftfishnguiddeassistantText: {
     color: '#fff',
-    fontSize: 15,
-    lineHeight: 18,
+    fontSize: 14,
+    lineHeight: 15,
     fontFamily: 'Akatab-Regular',
   },
 

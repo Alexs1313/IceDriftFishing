@@ -1,4 +1,4 @@
-package com.icedriftfishing
+package com.icedriftfishexplorer
 
 import android.app.Application
 import com.facebook.react.PackageList
