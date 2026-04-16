@@ -1,4 +1,4 @@
-package com.drif.ice.winter.fish
+package com.icedriftfishexplorer
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate
