@@ -11,57 +11,134 @@ av.addListener(() => {
 });
 
 export const brightbrainhtmlLoader = `<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-  body {
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: transparent;
-  }
-
-  .loader {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .circle {
-    width: 1em;
-    height: 1em;
-    margin: 0 0.25em;
-    border-radius: 50%;
-    background-color: #1554A8;
-    animation: wave 1.5s infinite ease-in-out;
-  }
-
-  @keyframes wave {
-    0%, 100% {
-      transform: translateY(0);
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: transparent;
     }
-    50% {
-      transform: translateY(-1em);
-    }
-  }
 
-  .circle:nth-child(1) { animation-delay: 0s; }
-  .circle:nth-child(2) { animation-delay: 0.2s; }
-  .circle:nth-child(3) { animation-delay: 0.4s; }
-  .circle:nth-child(4) { animation-delay: 0.6s; }
-  .circle:nth-child(5) { animation-delay: 0.8s; }
-</style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .tree {
+      position: relative;
+      width: 50px;
+      height: 50px;
+      transform-style: preserve-3d;
+      transform: rotateX(-20deg) rotateY(30deg);
+      animation: treeAnimate 5s linear infinite;
+    }
+
+    @keyframes treeAnimate {
+      0% {
+        transform: rotateX(-20deg) rotateY(360deg);
+      }
+      100% {
+        transform: rotateX(-20deg) rotateY(0deg);
+      }
+    }
+
+    .tree div {
+      position: absolute;
+      top: -50px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transform: translateY(calc(25px * var(--x))) translateZ(0px);
+    }
+
+    .tree div.branch span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, #69c069, #77dd77);
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+      border-bottom: 5px solid #00000019;
+      transform-origin: bottom;
+      transform: rotateY(calc(90deg * var(--i))) rotateX(30deg) translateZ(28.5px);
+    }
+
+    .tree div.stem span {
+      position: absolute;
+      top: 110px;
+      left: calc(50% - 7.5px);
+      width: 15px;
+      height: 50%;
+      background: linear-gradient(90deg, #bb4622, #df7214);
+      border-bottom: 5px solid #00000019;
+      transform-origin: bottom;
+      transform: rotateY(calc(90deg * var(--i))) translateZ(7.5px);
+    }
+
+    .shadow {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      filter: blur(20px);
+      transform-style: preserve-3d;
+      transform: rotateX(90deg) translateZ(-65px);
+    }
+  </style>
 </head>
 <body>
-  <div class="loader">
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
+  <div class="container">
+    <div class="tree">
+      <div class="branch" style="--x: 0;">
+        <span style="--i: 0;"></span>
+        <span style="--i: 1;"></span>
+        <span style="--i: 2;"></span>
+        <span style="--i: 3;"></span>
+      </div>
+      <div class="branch" style="--x: 1;">
+        <span style="--i: 0;"></span>
+        <span style="--i: 1;"></span>
+        <span style="--i: 2;"></span>
+        <span style="--i: 3;"></span>
+      </div>
+      <div class="branch" style="--x: 2;">
+        <span style="--i: 0;"></span>
+        <span style="--i: 1;"></span>
+        <span style="--i: 2;"></span>
+        <span style="--i: 3;"></span>
+      </div>
+      <div class="branch" style="--x: 3;">
+        <span style="--i: 0;"></span>
+        <span style="--i: 1;"></span>
+        <span style="--i: 2;"></span>
+        <span style="--i: 3;"></span>
+      </div>
+      <div class="stem">
+        <span style="--i: 0;"></span>
+        <span style="--i: 1;"></span>
+        <span style="--i: 2;"></span>
+        <span style="--i: 3;"></span>
+      </div>
+      <span class="shadow"></span>
+    </div>
   </div>
 </body>
 </html>`;
